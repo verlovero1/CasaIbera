@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
-    <script src="https://unpkg.com/aframe-transparent-video-shader@1.0.6/dist/aframe-transparent-video-shader.umd.js"></script>
+    
   </head>
   <body>
     <a-scene mindar-image="imageTargetSrc: assets/muitu.mind;" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
@@ -13,11 +13,12 @@
               <video id="muitu" preload="auto" src="assets/muitu.webm" autoplay="true" loop="true" playsinline="" webkit-playsinline=""></video>
      
      </a-assets>
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      
+       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       
 
       <a-entity mindar-image-target="targetIndex: 0">
-      <a-plane material="shader: transparent-video; src: #muitu; transparent: true; blending: additive" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="blue"></a-plane>
+      <a-plane material="shader: transparent-video; src: #muitu; blending: additive" position="0 0 0" height="0.552" width="1" rotation="0 0 0" color="blue"></a-plane>
         
          <!--  <a-entity material="shader: transparent-video; src: #muitu; transparent: true; blending: additive" 
             geometry="primitive: plane;
